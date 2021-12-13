@@ -6,63 +6,73 @@
 # All Shortcut files (*.LNK) (created when app installed via MSI).
 # All files should be in the same folder as this script.
 
+$psfLauncher='psflauncher32.exe'
+
 # config.json Application arguments
 $applications = @{
-    id = 'APP'
+    id = ''
     executable = ''
     arguments = ''
     }
-$appsArray = [System.Collections.ArrayList]@()
+$configjsonArray = [System.Collections.ArrayList]@()
 
 # Get AppIds from manifest
 [xml]$manifest = get-content "AppxManifest.xml"
-$apps= $manifest.Package.Applications.Application
-foreach ($app in $apps) {
+$appsInManifest= $manifest.Package.Applications.Application
+foreach ($app in $appsInManifest) {
     $object = new-object psobject -Property $applications
     $object.id= $app.id;
     $object.executable = $app.Executable;
-    $res = $appsArray.Add($object);
+    $res = $configjsonArray.Add($object);
 }
 
+# For each shortcut (lnk):
+# Extract the executable shortcut and detemine the index in the Applications collection in the manifest
 # https://www.alexandrumarin.com/add-shortcut-arguments-in-msix-with-psf/
 $sh = New-Object -ComObject WScript.Shell
 $files=Get-ChildItem *.lnk
-$found=$false;
 $foundArray = [System.Collections.ArrayList]@()
 foreach ($file in $files) {
-    $ManifestExe = Split-Path $app.Executable -Leaf
-    $ShortcutExe = Split-Path $sh.CreateShortcut($file).TargetPath  -Leaf
-    #$ShortcutExe
-    $shResult = $sh.CreateShortcut($file);
-    $shResult 
-    Write-Host("---")
-    $foundPath='';
     # Search for ShortCutExe in appArray, add addtional Application node to AppxManifest if exe appears in multiple lnks.
     # MPT only creates one Application node per exe.
-    $res1 = ($appsArray | Where-Object { (Split-Path $_.executable -Leaf) -eq (Split-Path $sh.CreateShortcut($file).TargetPath -Leaf)})
-    if ($null -ne $res1) {
-        $findRes =($foundArray | Where-Object {((Split-Path $sh.CreateShortcut($file).TargetPath -Leaf))})
-        if ($null -eq $findRes) {
-            $index = [array]::IndexOf($appsArray, $res1)
-            # $t = apps[$index];
-            #$t = $manifest.CreateElement("Application");
-            #$t.SetAttribute("Id",$apps[$index].Id);
-            #$manifest.Package.Applications.AppendChild($t);
-            $t = $manifest.Package.Applications.Application[$index].Clone();
-            $manifest.Package.Applications.AppendChild($t);
-            
+    $searchResults = ($configjsonArray | Where-Object { (Split-Path $_.executable -Leaf) -eq (Split-Path $sh.CreateShortcut($file).TargetPath -Leaf)})
+    if ($searchResults.Count -gt 1) {
+        $configJson=$searchResults[0];
+    } else {
+        $configJson=$searchResults;
+    }
 
+    if ($null -ne $configJson) {
+        $findRes =$foundArray -contains (Split-Path $sh.CreateShortcut($file).TargetPath -Leaf)
+        if ($true -ne $findRes) {
+            $res = $foundArray.Add((Split-Path $sh.CreateShortcut($file).TargetPath -Leaf))
+            $configJson.executable = $sh.CreateShortcut($file).TargetPath  
+            $configJson.arguments = $sh.CreateShortcut($file).Arguments
         } else {
-            $foundArray.Add((Split-Path $sh.CreateShortcut($file).TargetPath -Leaf))
+            $index = [array]::IndexOf($configjsonArray, $configJson)
+            if ($index -gt -1) {
+                $tempNode = $manifest.Package.Applications.Application[$index].Clone();
+                $attrib= $tempNode.GetAttribute("Id") + $manifest.Package.Applications.Application.Count;
+                $tempNode.SetAttribute("Id",$attrib);
+                $res = $manifest.Package.Applications.AppendChild($tempNode);
+            
+                $object = new-object psobject -Property $applications
+                $object.id= $attrib;
+                $object.executable = $sh.CreateShortcut($file).TargetPath
+                $object.arguments = $sh.CreateShortcut($file).Arguments  
+                $res = $configjsonArray.Add($object);
+            }
         }
-        if ($found -eq $true) {
-            $i = $appsArray.Add($res1);
-            $res1 = res$appsArray[$i];
-            $found=$false;
-        } 
-        $res1.executable = $sh.CreateShortcut($file).TargetPath  
-        $res1.arguments = $sh.CreateShortcut($file).Arguments
     }
 }
-$appsArray | ConvertTo-Json 
+
+# Set Executable in manifest to PSFLauncher32/64.exe
+foreach ($app in $manifest.Package.Applications.Application) {
+    $app.SetAttribute("Executable", $psfLauncher);
+}
+
+# Write new manifest and config.txt (use this in your config.json)
+$outPath = (Split-Path -Path $MyInvocation.MyCommand.Path);
+$manifest.Save($outPath + "\AppxManifestNew.xml");
+$configjsonArray | ConvertTo-Json | Out-File ($outPath + "config.txt");
 

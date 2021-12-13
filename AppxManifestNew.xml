@@ -1,0 +1,1021 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2" xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3" xmlns:uap10="http://schemas.microsoft.com/appx/manifest/uap/windows10/10" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" xmlns:com="http://schemas.microsoft.com/appx/manifest/com/windows10" IgnorableNamespaces="uap uap2 uap3 uap10 rescap com">
+  <!--Package created by MSIX Packaging Tool version: 1.2021.1105.0-->
+  <Identity Name="ReflectionMultihost" Publisher="CN=Contoso Software (FOR LAB USE ONLY), O=Contoso Corporation, C=US" Version="1.0.0.0" ProcessorArchitecture="x64" />
+  <Properties>
+    <DisplayName>ReflectionMultihost</DisplayName>
+    <PublisherDisplayName>Contoso Software</PublisherDisplayName>
+    <Description>None</Description>
+    <Logo>Assets\StoreLogo.png</Logo>
+    <uap10:PackageIntegrity>
+      <uap10:Content Enforcement="on" />
+    </uap10:PackageIntegrity>
+  </Properties>
+  <Resources>
+    <Resource Language="en-us" />
+  </Resources>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.22000.1" />
+  </Dependencies>
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+  </Capabilities>
+  <Applications>
+    <Application Id="LANGSET" Executable="psflauncher32.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements BackgroundColor="transparent" DisplayName="Set Language" Square150x150Logo="Assets\LANGSET-Square150x150Logo.png" Square44x44Logo="Assets\LANGSET-Square44x44Logo.png" Description="Set Language">
+        <uap:DefaultTile Wide310x150Logo="Assets\LANGSET-Wide310x150Logo.png" Square310x310Logo="Assets\LANGSET-Square310x310Logo.png" Square71x71Logo="Assets\LANGSET-Square71x71Logo.png" />
+      </uap:VisualElements>
+    </Application>
+    <Application Id="REightWIN" Executable="psflauncher32.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements BackgroundColor="transparent" DisplayName="WRQ AS400" Square150x150Logo="Assets\REightWIN-Square150x150Logo.png" Square44x44Logo="Assets\REightWIN-Square44x44Logo.png" Description="WRQ AS400">
+        <uap:DefaultTile Wide310x150Logo="Assets\REightWIN-Wide310x150Logo.png" Square310x310Logo="Assets\REightWIN-Square310x310Logo.png" Square71x71Logo="Assets\REightWIN-Square71x71Logo.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="rsf">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rsf</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\rsf.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="open" Parameters="&quot;%1&quot;">open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="rst">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rst</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\rsf.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="open" Parameters="/template &quot;%1&quot;">open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+      </Extensions>
+    </Application>
+    <Application Id="RFTPC" Executable="psflauncher32.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements BackgroundColor="transparent" DisplayName="WRQ FTP" Square150x150Logo="Assets\RFTPC-Square150x150Logo.png" Square44x44Logo="Assets\RFTPC-Square44x44Logo.png" Description="WRQ FTP">
+        <uap:DefaultTile Wide310x150Logo="Assets\RFTPC-Wide310x150Logo.png" Square310x310Logo="Assets\RFTPC-Square310x310Logo.png" Square71x71Logo="Assets\RFTPC-Square71x71Logo.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="rfc">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rfc</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\RFC.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="open" Parameters="&quot;%1&quot;">open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="rfs">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rfs</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\RFC.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="open" Parameters="/rfs &quot;%1&quot;">open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="rfw">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rfw</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\RFC.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="open" Parameters="/rfw &quot;%1&quot;">open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+      </Extensions>
+    </Application>
+    <Application Id="RTwoWIN" Executable="psflauncher32.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements BackgroundColor="transparent" DisplayName="WRQ Telnet (Store)" Square150x150Logo="Assets\RTwoWIN-Square150x150Logo.png" Square44x44Logo="Assets\RTwoWIN-Square44x44Logo.png" Description="WRQ Telnet (Store)">
+        <uap:DefaultTile Wide310x150Logo="Assets\RTwoWIN-Wide310x150Logo.png" Square310x310Logo="Assets\RTwoWIN-Square310x310Logo.png" Square71x71Logo="Assets\RTwoWIN-Square71x71Logo.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="r2u">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.r2u</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\r2u.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="Open" Parameters="/u /s &quot;%1&quot;">Open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="r2w">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.r2w</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\r2w.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="Open" Parameters="/u /s &quot;%1&quot;">Open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="rc2">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rc2</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\rc2.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="Open" Parameters="/u /rcls &quot;%1&quot;">Open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+      </Extensions>
+    </Application>
+    <Application Id="REightWIN4" Executable="psflauncher32.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements BackgroundColor="transparent" DisplayName="WRQ AS400" Square150x150Logo="Assets\REightWIN-Square150x150Logo.png" Square44x44Logo="Assets\REightWIN-Square44x44Logo.png" Description="WRQ AS400">
+        <uap:DefaultTile Wide310x150Logo="Assets\REightWIN-Wide310x150Logo.png" Square310x310Logo="Assets\REightWIN-Square310x310Logo.png" Square71x71Logo="Assets\REightWIN-Square71x71Logo.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="rsf">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rsf</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\rsf.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="open" Parameters="&quot;%1&quot;">open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="rst">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rst</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\rsf.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="open" Parameters="/template &quot;%1&quot;">open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+      </Extensions>
+    </Application>
+    <Application Id="REightWIN5" Executable="psflauncher32.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements BackgroundColor="transparent" DisplayName="WRQ AS400" Square150x150Logo="Assets\REightWIN-Square150x150Logo.png" Square44x44Logo="Assets\REightWIN-Square44x44Logo.png" Description="WRQ AS400">
+        <uap:DefaultTile Wide310x150Logo="Assets\REightWIN-Wide310x150Logo.png" Square310x310Logo="Assets\REightWIN-Square310x310Logo.png" Square71x71Logo="Assets\REightWIN-Square71x71Logo.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="rsf">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rsf</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\rsf.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="open" Parameters="&quot;%1&quot;">open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="rst">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rst</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\rsf.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="open" Parameters="/template &quot;%1&quot;">open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+      </Extensions>
+    </Application>
+    <Application Id="REightWIN6" Executable="psflauncher32.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements BackgroundColor="transparent" DisplayName="WRQ AS400" Square150x150Logo="Assets\REightWIN-Square150x150Logo.png" Square44x44Logo="Assets\REightWIN-Square44x44Logo.png" Description="WRQ AS400">
+        <uap:DefaultTile Wide310x150Logo="Assets\REightWIN-Wide310x150Logo.png" Square310x310Logo="Assets\REightWIN-Square310x310Logo.png" Square71x71Logo="Assets\REightWIN-Square71x71Logo.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="rsf">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rsf</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\rsf.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="open" Parameters="&quot;%1&quot;">open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="rst">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rst</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\rsf.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="open" Parameters="/template &quot;%1&quot;">open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+      </Extensions>
+    </Application>
+    <Application Id="REightWIN7" Executable="psflauncher32.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements BackgroundColor="transparent" DisplayName="WRQ AS400" Square150x150Logo="Assets\REightWIN-Square150x150Logo.png" Square44x44Logo="Assets\REightWIN-Square44x44Logo.png" Description="WRQ AS400">
+        <uap:DefaultTile Wide310x150Logo="Assets\REightWIN-Wide310x150Logo.png" Square310x310Logo="Assets\REightWIN-Square310x310Logo.png" Square71x71Logo="Assets\REightWIN-Square71x71Logo.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="rsf">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rsf</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\rsf.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="open" Parameters="&quot;%1&quot;">open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="rst">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rst</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\rsf.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="open" Parameters="/template &quot;%1&quot;">open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+      </Extensions>
+    </Application>
+    <Application Id="REightWIN8" Executable="psflauncher32.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements BackgroundColor="transparent" DisplayName="WRQ AS400" Square150x150Logo="Assets\REightWIN-Square150x150Logo.png" Square44x44Logo="Assets\REightWIN-Square44x44Logo.png" Description="WRQ AS400">
+        <uap:DefaultTile Wide310x150Logo="Assets\REightWIN-Wide310x150Logo.png" Square310x310Logo="Assets\REightWIN-Square310x310Logo.png" Square71x71Logo="Assets\REightWIN-Square71x71Logo.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="rsf">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rsf</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\rsf.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="open" Parameters="&quot;%1&quot;">open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="rst">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rst</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\rsf.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="open" Parameters="/template &quot;%1&quot;">open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+      </Extensions>
+    </Application>
+    <Application Id="REightWIN9" Executable="psflauncher32.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements BackgroundColor="transparent" DisplayName="WRQ AS400" Square150x150Logo="Assets\REightWIN-Square150x150Logo.png" Square44x44Logo="Assets\REightWIN-Square44x44Logo.png" Description="WRQ AS400">
+        <uap:DefaultTile Wide310x150Logo="Assets\REightWIN-Wide310x150Logo.png" Square310x310Logo="Assets\REightWIN-Square310x310Logo.png" Square71x71Logo="Assets\REightWIN-Square71x71Logo.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="rsf">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rsf</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\rsf.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="open" Parameters="&quot;%1&quot;">open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="rst">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rst</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\rsf.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="open" Parameters="/template &quot;%1&quot;">open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+      </Extensions>
+    </Application>
+    <Application Id="RTwoWIN10" Executable="psflauncher32.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements BackgroundColor="transparent" DisplayName="WRQ Telnet (Store)" Square150x150Logo="Assets\RTwoWIN-Square150x150Logo.png" Square44x44Logo="Assets\RTwoWIN-Square44x44Logo.png" Description="WRQ Telnet (Store)">
+        <uap:DefaultTile Wide310x150Logo="Assets\RTwoWIN-Wide310x150Logo.png" Square310x310Logo="Assets\RTwoWIN-Square310x310Logo.png" Square71x71Logo="Assets\RTwoWIN-Square71x71Logo.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="r2u">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.r2u</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\r2u.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="Open" Parameters="/u /s &quot;%1&quot;">Open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="r2w">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.r2w</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\r2w.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="Open" Parameters="/u /s &quot;%1&quot;">Open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="rc2">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rc2</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\rc2.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="Open" Parameters="/u /rcls &quot;%1&quot;">Open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+      </Extensions>
+    </Application>
+    <Application Id="RTwoWIN11" Executable="psflauncher32.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements BackgroundColor="transparent" DisplayName="WRQ Telnet (Store)" Square150x150Logo="Assets\RTwoWIN-Square150x150Logo.png" Square44x44Logo="Assets\RTwoWIN-Square44x44Logo.png" Description="WRQ Telnet (Store)">
+        <uap:DefaultTile Wide310x150Logo="Assets\RTwoWIN-Wide310x150Logo.png" Square310x310Logo="Assets\RTwoWIN-Square310x310Logo.png" Square71x71Logo="Assets\RTwoWIN-Square71x71Logo.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="r2u">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.r2u</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\r2u.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="Open" Parameters="/u /s &quot;%1&quot;">Open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="r2w">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.r2w</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\r2w.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="Open" Parameters="/u /s &quot;%1&quot;">Open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+        <uap3:Extension Category="windows.fileTypeAssociation">
+          <uap3:FileTypeAssociation Name="rc2">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.rc2</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:Logo>Assets\rc2.png</uap:Logo>
+            <uap2:SupportedVerbs>
+              <uap3:Verb Id="Open" Parameters="/u /rcls &quot;%1&quot;">Open</uap3:Verb>
+            </uap2:SupportedVerbs>
+          </uap3:FileTypeAssociation>
+        </uap3:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Extensions>
+    <com:Extension Category="windows.comInterface">
+      <com:ComInterface>
+        <com:Interface Id="bf3d13d1-f54b-4ce4-8c74-86b55c1f5976" UseUniversalMarshaler="true">
+          <com:TypeLib Id="3ec5c6f0-80cd-4e5b-833e-32143ebd4985" VersionNumber="1.0" />
+        </com:Interface>
+        <com:Interface Id="17e53841-a879-4604-9212-6b93420ae6bf" UseUniversalMarshaler="true">
+          <com:TypeLib Id="3ec5c6f0-80cd-4e5b-833e-32143ebd4985" VersionNumber="1.0" />
+        </com:Interface>
+        <com:Interface Id="380cbeff-63f4-4bce-86df-6363d4de6b3a" UseUniversalMarshaler="true">
+          <com:TypeLib Id="22e3d33c-657d-4bfa-9f0d-2ceeba83b9a3" VersionNumber="1.0" />
+        </com:Interface>
+        <com:Interface Id="f57b7ed0-d8ab-11d1-85df-00c04f98f42c" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="eee00921-e393-11d1-bb03-00c04fb6c4a6" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="eee0091c-e393-11d1-bb03-00c04fb6c4a6" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="eee00919-e393-11d1-bb03-00c04fb6c4a6" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="eee00915-e393-11d1-bb03-00c04fb6c4a6" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="da936b64-ac8b-11d1-b6e5-00a0c90f2744" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="da936b62-ac8b-11d1-b6e5-00a0c90f2744" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="be39f3d4-1b13-11d0-887f-00a0c90f2744" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="0002e18c-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="0002e188-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="0002e17e-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="0002e17a-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="0002e176-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="0002e172-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="0002e16e-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="0002e16c-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="0002e16b-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="0002e16a-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="0002e167-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="0002e166-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="0002e165-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="0002e164-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="0002e163-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="0002e162-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="0002e161-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="0002e160-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="0002e159-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="0002e158-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="0002e130-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="0002e11a-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="0002e115-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="0002e113-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="0002e157-0000-0000-c000-000000000046" VersionNumber="5.3" />
+        </com:Interface>
+        <com:Interface Id="15b168b4-ad3c-11d1-a8d8-00a0c9200e61" UseUniversalMarshaler="true">
+          <com:TypeLib Id="15b168b5-ad3c-11d1-a8d8-00a0c9200e61" VersionNumber="1.0" />
+        </com:Interface>
+        <com:Interface Id="e675f3f0-91b5-11d0-9484-00a0c91110ed" UseUniversalMarshaler="true">
+          <com:TypeLib Id="6b263850-900b-11d0-9484-00a0c91110ed" VersionNumber="1.0" />
+        </com:Interface>
+        <com:Interface Id="a1741ef6-ffc6-11d0-bd02-00c04fc2fb86" UseUniversalMarshaler="true">
+          <com:TypeLib Id="6b263850-900b-11d0-9484-00a0c91110ed" VersionNumber="1.0" />
+        </com:Interface>
+        <com:Interface Id="99ff4676-ffc3-11d0-bd02-00c04fc2fb86" UseUniversalMarshaler="true">
+          <com:TypeLib Id="6b263850-900b-11d0-9484-00a0c91110ed" VersionNumber="1.0" />
+        </com:Interface>
+        <com:Interface Id="6c51b910-900b-11d0-9484-00a0c91110ed" UseUniversalMarshaler="true">
+          <com:TypeLib Id="6b263850-900b-11d0-9484-00a0c91110ed" VersionNumber="1.0" />
+        </com:Interface>
+        <com:Interface Id="5de7a180-91b1-11d0-9484-00a0c91110ed" UseUniversalMarshaler="true">
+          <com:TypeLib Id="6b263850-900b-11d0-9484-00a0c91110ed" VersionNumber="1.0" />
+        </com:Interface>
+        <com:Interface Id="21b15f0a-4b5f-11d3-a9b6-00c04fa3624c" UseUniversalMarshaler="true">
+          <com:TypeLib Id="df3c9695-8437-11d0-a2c4-00a024893a8d" VersionNumber="1.0" />
+        </com:Interface>
+        <com:Interface Id="fac96090-a967-431d-a300-380d8bc82970" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="f9f63e27-3305-4b85-a06b-570ffb1ad7a9" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="f4582022-6d28-4d3a-ac69-69d92f052256" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="ec841cdb-1d9a-4191-8de5-48a36ec13fb8" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="ebe0c613-5877-4f98-8542-d53506e452df" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="df94cb03-5283-4ae4-9ab8-14c61fa62da9" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="cec7868e-63d6-4d59-9b1e-3dcf11759716" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="c75c8d8a-fe24-4332-9261-32bf2c78ae00" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="c11060de-238b-4128-8dca-2d0066b7c8b8" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="bcb0486f-324d-4aa8-914e-c21b913859bb" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="bc6c6ef8-b9e6-428d-adce-de84cdf97763" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="b83c34eb-a109-4843-961e-a985fcb7370c" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="b456b714-329f-4601-bf7e-dfd165da23c1" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="b10b7d5a-8c2e-46c4-8950-636b5379a447" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="a6517680-1b7e-414c-a64b-65c1cbe24643" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="7eaa2acb-f552-46d7-ae51-c85ab05ff2cd" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="64f06e78-6751-484a-a913-90f4385c0d63" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="5ec4a246-fa34-417b-a0b5-9be3ae6fa106" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="5ea8cf12-cc6b-487d-9562-1204d79c90e9" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="5a6c8021-9e47-4a33-a37d-64375c3d7843" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="53866070-182f-4591-9d4f-de5490eba4c9" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="433c0c98-df07-4d8b-9c21-a5007982362d" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="3da063ff-dc01-4b1e-a24a-7c036fb2fd70" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="3980c93c-4c3f-4e60-a462-13070b526568" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="32a409ff-6e49-4f9c-aad7-724e0bb279f6" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="2c4ceb09-ae4c-41f2-9861-0298e350ad1e" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="25cd38cf-0ab7-4a2f-9985-72b212744e90" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="0747120c-96b8-4ab9-ac88-b163f48160ac" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="001865be-6ecb-40b9-a176-d347c59b3a5e" UseUniversalMarshaler="true">
+          <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13" VersionNumber="6.4" />
+        </com:Interface>
+        <com:Interface Id="919aa22c-b9ad-11d3-8d59-0050048384e3" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="618736e0-3c3d-11cf-810c-00aa00389b71" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="55f88896-7708-11d1-aceb-006008961da5" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="55f88892-7708-11d1-aceb-006008961da5" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="55f88890-7708-11d1-aceb-006008961da5" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="4cac6328-b9b0-11d3-8d59-0050048384e3" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="00194002-d9c3-11d3-8d59-0050048384e3" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000cd102-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000cd101-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000cd100-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c1534-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c1533-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c1532-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c1531-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c1530-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0936-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0914-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0913-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0411-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0410-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0388-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0387-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0386-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0385-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0382-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0381-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0380-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c037f-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c037e-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c037d-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c037c-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c037b-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c037a-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0379-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0377-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0376-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0375-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0373-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0372-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0371-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0370-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c036f-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c036e-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c036d-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c036c-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c036a-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0369-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0368-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0367-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0366-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0365-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0364-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0363-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0362-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0361-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0360-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c035a-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0359-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0358-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0357-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0356-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0353-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0341-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0340-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c033a-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0339-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0338-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0337-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0334-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0333-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0332-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0331-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0330-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c032e-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0328-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0326-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0324-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0322-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0321-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0320-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c031f-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c031e-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c031d-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c031c-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c031b-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c031a-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0319-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0318-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0317-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0316-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0315-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0314-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0313-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0312-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0311-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0310-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c030e-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c030d-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c030c-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c030a-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0308-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0306-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0304-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0302-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0301-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000c0300-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="000672ac-0000-0000-c000-000000000046" UseUniversalMarshaler="true">
+          <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52" VersionNumber="2.3" />
+        </com:Interface>
+        <com:Interface Id="15b168af-ad3c-11d1-a8d8-00a0c9200e61" UseUniversalMarshaler="true">
+          <com:TypeLib Id="15b168b0-ad3c-11d1-a8d8-00a0c9200e61" VersionNumber="1.0" />
+        </com:Interface>
+        <com:TypeLib Id="3ec5c6f0-80cd-4e5b-833e-32143ebd4985">
+          <com:Version VersionNumber="1.0" LocaleId="0" LibraryFlag="0">
+            <com:Win32Path Path="VFS\ProgramFilesX86\Reflection\rssh.exe" />
+          </com:Version>
+        </com:TypeLib>
+        <com:TypeLib Id="22e3d33c-657d-4bfa-9f0d-2ceeba83b9a3">
+          <com:Version VersionNumber="1.0" LocaleId="0" LibraryFlag="0">
+            <com:Win32Path Path="VFS\ProgramFilesX86\Reflection\R8axctrl.dll" />
+          </com:Version>
+        </com:TypeLib>
+        <com:TypeLib Id="0002e157-0000-0000-c000-000000000046">
+          <com:Version VersionNumber="5.3" LocaleId="0" LibraryFlag="0">
+            <com:Win32Path Path="VFS\ProgramFilesCommonX86\Microsoft Shared\VBA\VBA6\VBE6EXT.OLB" />
+          </com:Version>
+        </com:TypeLib>
+        <com:TypeLib Id="15b168b5-ad3c-11d1-a8d8-00a0c9200e61">
+          <com:Version VersionNumber="1.0" LocaleId="0" LibraryFlag="0">
+            <com:Win32Path Path="VFS\ProgramFilesX86\Reflection\r4axctrl.ocx" />
+          </com:Version>
+        </com:TypeLib>
+        <com:TypeLib Id="6b263850-900b-11d0-9484-00a0c91110ed">
+          <com:Version VersionNumber="1.0" LocaleId="0" LibraryFlag="0">
+            <com:Win32Path Path="VFS\SystemX86\MSSTDFMT.DLL" />
+          </com:Version>
+        </com:TypeLib>
+        <com:TypeLib Id="df3c9695-8437-11d0-a2c4-00a024893a8d">
+          <com:Version VersionNumber="1.0" LocaleId="0" LibraryFlag="0">
+            <com:Win32Path Path="VFS\ProgramFilesX86\Reflection\rftpcom.dll" />
+          </com:Version>
+        </com:TypeLib>
+        <com:TypeLib Id="f048986a-dbe4-43aa-b394-6846e7df3f13">
+          <com:Version VersionNumber="6.4" LocaleId="0" LibraryFlag="0">
+            <com:Win32Path Path="VFS\ProgramFilesCommonX86\Microsoft Shared\VBA\VBA6\apc64.dll" />
+          </com:Version>
+        </com:TypeLib>
+        <com:TypeLib Id="2df8d04c-5bfa-101b-bde5-00aa0044de52">
+          <com:Version VersionNumber="2.3" LocaleId="0" LibraryFlag="0">
+            <com:Win32Path Path="VFS\ProgramFilesCommonX86\Microsoft Shared\OFFICE11\MSO.DLL" />
+          </com:Version>
+        </com:TypeLib>
+        <com:TypeLib Id="000204ef-0000-0000-c000-000000000046">
+          <com:Version VersionNumber="4.0" LocaleId="9" LibraryFlag="0">
+            <com:Win32Path Path="VFS\ProgramFilesCommonX86\Microsoft Shared\VBA\VBA6\VBE6.DLL" />
+          </com:Version>
+        </com:TypeLib>
+        <com:TypeLib Id="0d452ee1-e08f-101a-852e-02608c4d0bb4">
+          <com:Version VersionNumber="2.0" LocaleId="0" LibraryFlag="2">
+            <com:Win32Path Path="VFS\SystemX86\FM20.DLL" />
+          </com:Version>
+        </com:TypeLib>
+        <com:TypeLib Id="0de5a6c0-4b0d-101b-ac7b-04021c007002">
+          <com:Version VersionNumber="2.0" LocaleId="409" LibraryFlag="0">
+            <com:Win32Path Path="VFS\ProgramFilesX86\Reflection\r2wintlb.olb" />
+          </com:Version>
+        </com:TypeLib>
+        <com:TypeLib Id="0fc34060-4b0d-101b-ac7b-04021c007002">
+          <com:Version VersionNumber="2.0" LocaleId="409" LibraryFlag="0">
+            <com:Win32Path Path="VFS\ProgramFilesX86\Reflection\r4wintlb.olb" />
+          </com:Version>
+        </com:TypeLib>
+        <com:TypeLib Id="5df67600-88fb-11d1-a393-00a024893a8d">
+          <com:Version VersionNumber="1.0" LocaleId="0" LibraryFlag="5">
+            <com:Win32Path Path="VFS\ProgramFilesX86\Reflection\Secuser.dll" />
+          </com:Version>
+        </com:TypeLib>
+        <com:TypeLib Id="ac2de821-36a2-11cf-8053-00aa006009fa">
+          <com:Version VersionNumber="2.0" LocaleId="0" LibraryFlag="2">
+            <com:Win32Path Path="VFS\SystemX86\FM20.DLL" ResourceId="2" />
+          </com:Version>
+        </com:TypeLib>
+        <com:TypeLib Id="ecf246d9-e871-11d2-8cc2-00c04f72c0ed">
+          <com:Version VersionNumber="e.0" LocaleId="409">
+            <com:Win32Path Path="VFS\ProgramFilesX86\Reflection\R8ole32.olb" />
+          </com:Version>
+        </com:TypeLib>
+        <com:TypeLib Id="ecf246e0-e871-11d2-8cc2-00c04f72c0ed">
+          <com:Version VersionNumber="e.0" LocaleId="409">
+            <com:Win32Path Path="VFS\ProgramFilesX86\Reflection\Snaole32.olb" />
+          </com:Version>
+        </com:TypeLib>
+        <com:TypeLib Id="15b168b0-ad3c-11d1-a8d8-00a0c9200e61">
+          <com:Version VersionNumber="1.0" LocaleId="0" LibraryFlag="0">
+            <com:Win32Path Path="VFS\ProgramFilesX86\Reflection\r2axctrl.ocx" />
+          </com:Version>
+        </com:TypeLib>
+      </com:ComInterface>
+    </com:Extension>
+  </Extensions>
+</Package>
