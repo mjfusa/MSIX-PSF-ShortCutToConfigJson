@@ -36,7 +36,7 @@ foreach ($file in $files) {
     # Search for ShortCutExe in appArray, add addtional Application node to AppxManifest if exe appears in multiple lnks.
     # MPT only creates one Application node per exe.
     $searchResults = ($configjsonArray | Where-Object { (Split-Path $_.executable -Leaf) -eq (Split-Path $sh.CreateShortcut($file).TargetPath -Leaf)})
-    if ($searchResults.Count -gt 1) {
+    if ($searchResults.executable.Length -gt 1) {
         $configJson=$searchResults[0];
     } else {
         $configJson=$searchResults;
@@ -54,6 +54,9 @@ foreach ($file in $files) {
                 $tempNode = $manifest.Package.Applications.Application[$index].Clone();
                 $attrib= $tempNode.GetAttribute("Id") + $manifest.Package.Applications.Application.Count;
                 $tempNode.SetAttribute("Id",$attrib);
+                $fileName=[System.IO.Path]::GetFileNameWithoutExtension($file.Name);
+                $ve = $tempNode.VisualElements;
+                $ve.SetAttribute("DisplayName","$fileName");
                 $res = $manifest.Package.Applications.AppendChild($tempNode);
             
                 $object = new-object psobject -Property $applications
@@ -74,5 +77,5 @@ foreach ($app in $manifest.Package.Applications.Application) {
 # Write new manifest and config.txt (use this in your config.json)
 $outPath = (Split-Path -Path $MyInvocation.MyCommand.Path);
 $manifest.Save($outPath + "\AppxManifestNew.xml");
-$configjsonArray | ConvertTo-Json | Out-File ($outPath + "config.txt");
+$configjsonArray | ConvertTo-Json | Out-File ($outPath + "\config.txt");
 
