@@ -38,11 +38,11 @@ However, after packaging as MSIX and installing, only two entries are in the Sta
 This script:
 1. Creates an AppxManifestNew.xml which contains:
 
-* Additional applications as needed for the multiple non-unique executables
+* Additional ```<Application>``` nodes as needed for the multiple non-unique command lines
 
-* Replaces the Executable element in the Application defintion with ```PsfLauncher32/64.exe```
+* Replaces the Executable element in the ```<Application>``` defintion with ```PsfLauncher32/64.exe```
 
-2. Creates config.txt which contains an ```application``` definition for each app launch scenario including the command line parameters. 
+2. Creates config.txt which contains an ```application``` definition for each app launch scenario including the command line parameters. The *id* field corresponds to the ```<Application id``` element in the respective ```<Application>``` node in AppxManifestNew.xml.
 
 ```
 {
@@ -61,6 +61,7 @@ It does this by reading the shortcut files (.LNK) and reconciling the manifest a
 ## Putting it all together - Integrate PSF
 
 Use the MSIX Packaging tool to modify the original MSIX to include the manifest and add the PSF binaries.
+1. Complete the config.json file using the config.txt created above. Use the config.txt for the ```applications``` section.
 1. Right click the MSIX in File Explorer and select, ```Edit with MSIX Packaging Tool```.
 2. Open the Manifest file and replace the contents with the contents of ```AppxManifestNew.xml``` created with ShortCutToConfig.ps1. 
 3. In the ```Package files``` tab of the MPT, add the PSF Binaries and config.json file. For more information on integrating PSF, see [here](https://docs.microsoft.com/en-us/windows/msix/psf/create-shortcut-with-script-package-support-framework#get-the-psf-files). After adding the PSF binaries and config.json to the root of the package, the layout should look something like this:
